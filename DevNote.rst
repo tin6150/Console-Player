@@ -15,6 +15,7 @@ docker pull ghcr.io/tin6150/console-player:master
 
 docker tag  ghcr.io/tin6150/console-player:master registry.greta.local:443/console-player:v1
 docker image push                                 registry.greta.local:443/console-player:v1
+docker run -it --rm --device /dev/snd -v $(pwd):/mnt registry.greta.local:443/console-player:v1
 
 docker tag  ghcr.io/tin6150/console-player:master registry.gretadev:443/console-player:v1
 docker image push                                 registry.gretadev:443/console-player:v1
